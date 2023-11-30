@@ -93,16 +93,16 @@ JOIN_REQS_DB = environ.get("JOIN_REQS_DB", 'DATABASE_URI')
 #url links
 SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
 SHORTLINK_API = environ.get('SHORTLINK_API', '')
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', 'false'))
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', ''))
 
 #Openai
-AI = is_enabled((environ.get('AI',"True")), True)
+AI = is_enabled((environ.get('AI', "True")), True) 
 OPENAI_API = environ.get("OPENAI_API", "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")
 AI_LOGS = int(environ.get("AI_LOGS", "-1002079130140")) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of Bot ]
 
 
 #Auto approve
-CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '0').split()]
+CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '1006159057').split()]
 TEXT = environ.get("APPROVED_WELCOME_TEXT", "Hello {mention}\nWelcome To {title}\n\nYour request has been approved")
 APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 
@@ -120,7 +120,7 @@ FILE_CHANNEL = int(environ.get('FILE_CHANNEL', '-1002037461526'))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002032811900'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'NAYAAAAOOOO')
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
-P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
+P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "false")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CUSTOM_FILE_CAPTION}")
@@ -129,7 +129,7 @@ IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", f"{script.IMDB_TEMPLATE_TXT}")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
-INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
+INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', "LOG_CHANNEL"))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1002079130140')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
