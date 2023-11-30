@@ -83,7 +83,7 @@ MONGO_URL = os.environ.get('MONGO_URL', "")
 DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
 
 # FSUB
-auth_channel = environ.get('AUTH_CHANNEL')
+auth_channel = environ.get('AUTH_CHANNEL', 'True')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 # Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID
 REQ_CHANNEL = environ.get("REQ_CHANNEL", "True")
@@ -96,9 +96,9 @@ SHORTLINK_API = environ.get('SHORTLINK_API', 'd70d2f40cefc0a39d81e1b2be77d409da7
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', 'false'))
 
 #Openai
-AI = is_enabled((environ.get("AI","True")), True)
-OPENAI_API = environ.get("OPENAI_API", "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")
-AI_LOGS = int(environ.get("AI_LOGS", "")) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of Bot ]
+AI = is_enabled((environ.get('AI',"True")), True)
+OPENAI_API = environ.get("OPENAI_API", "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")
+AI_LOGS = int(environ.get("AI_LOGS", "-1002079130140")) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of Bot ]
 
 
 #Auto approve
