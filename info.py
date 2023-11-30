@@ -92,7 +92,7 @@ JOIN_REQS_DB = environ.get("JOIN_REQS_DB", 'DATABASE_URI')
 
 #url links
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'tnshort.net')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'd70d2f40cefc0a39d81e1b2be77d409da78f8aed')
+SHORTLINK_API = environ.get('SHORTLINK_API', '')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', 'false'))
 
 #Openai
