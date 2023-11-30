@@ -91,9 +91,9 @@ REQ_CHANNEL = int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL)
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", 'DATABASE_URI')
 
 #url links
-SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
-SHORTLINK_API = environ.get('SHORTLINK_API', '')
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', ''))
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'tnshort.net')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'd70d2f40cefc0a39d81e1b2be77d409da78f8aed')
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', 'True'))
 
 #Openai
 AI = is_enabled((environ.get('AI', "True")), True) 
@@ -120,7 +120,7 @@ FILE_CHANNEL = int(environ.get('FILE_CHANNEL', '-1002079130140'))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002032811900'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'NAYAAAAOOOO')
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
-P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "false")), false)
+P_TTI_SHOW_ON = is_enabled((environ.get('P_TTI_SHOW_ON', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CUSTOM_FILE_CAPTION}")
